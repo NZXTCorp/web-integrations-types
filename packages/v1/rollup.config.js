@@ -21,7 +21,7 @@ const plugins = [
 
 const VERSION = 'v1'
 const rootDir = path.resolve(__dirname, '..', '..')
-const input = path.resolve(rootDir, 'src', VERSION, 'index.ts')
+const input = path.resolve(rootDir, 'packages', VERSION, 'index.ts')
 const outputDir = path.resolve(rootDir, 'dist', VERSION)
 
 export default [

@@ -1,6 +1,8 @@
 {
   "name": "@nzxt/web-integrations",
   "version": "1.0.0",
+  "author": "NZXT",
+  "license": "MIT",
   "description": "web integrations monitoring type definitions and utilities",
   "keywords": [
     "nzxt",
@@ -16,27 +18,20 @@
     "type": "git",
     "url": "git+https://github.com/nzxtcorp/web-integrations-lib.git"
   },
-  "license": "MIT",
-  "author": "NZXT",
   "exports": {
-    ".": {
-      "types": "./dist/types",
-      "import": "./dist/index.es.js",
-      "require": "./dist/index.js"
+    "./v1": {
+      "import": "./v1/index.es.js",
+      "require": "./v1/index.js",
+      "types": "./v1/index.d.ts"
     }
   },
-  "main": "./dist/index.js",
-  "module": "./dist/index.es.js",
-  "browser": "./dist/index.umd.js",
-  "types": "./dist/types",
   "files": [
-    "dist"
+    "v1/**/*"
   ],
   "scripts": {
     "build": "rimraf dist && npm run build:types && npm run build:js",
-    "build:js": "rollup --config src/v1/rollup.config.js",
-    "build:types": "tsc --emitDeclarationOnly --project src/v1/tsconfig.json",
-    "prepare": "husky install"
+    "build:js": "rollup --config packages/v1/rollup.config.js",
+    "build:types": "tsc --emitDeclarationOnly --project packages/v1/tsconfig.json"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -69,7 +64,6 @@
     "@types/babel__core": "^7.20.0",
     "@types/lodash": "4.14.182",
     "@types/node": "^18.15.11",
-    "husky": "^8.0.0",
     "lint-staged": "^12.4.2",
     "prettier": "^2.6.2",
     "rimraf": "^3.0.2",
@@ -77,6 +71,11 @@
     "rollup-plugin-terser": "^7.0.2",
     "semantic-release": "19.0.3",
     "typescript": "5.0.3"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
   },
   "publishConfig": {
     "tag": "latest",

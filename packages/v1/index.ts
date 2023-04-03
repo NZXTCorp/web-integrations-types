@@ -1,5 +1,5 @@
 /**
- * Listen to monitoring data updates from NZXT CAM
+ * Subscribe to monitoring data updates from NZXT CAM
  * @param callback - Callback to retrieve data on update
  * @returns Function to end listening to monitoring data updates
  */
@@ -21,8 +21,8 @@ export function onMonitoringDataUpdate(callback: (data: Pc) => void) {
 type NumberOrNull = number | null
 
 export interface Pc {
-  cpus: Array<Cpu>
-  gpus: Array<Gpu>
+  cpus: Cpu[]
+  gpus: Gpu[]
   ram: Ram
 }
 
@@ -52,7 +52,7 @@ export interface CpuCore {
   frequencyInMHz: NumberOrNull
   temperatureInCelsius: NumberOrNull
   numberOfThreads: NumberOrNull
-  threadInfo: Array<CpuThread>
+  threadInfo: CpuThread[]
 }
 
 export interface CpuThread {
@@ -101,7 +101,7 @@ export const POWER_LIMIT_TYPE_WATTS = 'watts'
 export interface Ram {
   size: NumberOrNull
   used: NumberOrNull
-  modules: Array<RamModule>
+  modules: RamModule[]
 }
 
 export interface RamModule {

@@ -10,7 +10,6 @@ specifiers:
   '@rollup/plugin-commonjs': ^22.0.0
   '@rollup/plugin-json': ^4.1.0
   '@rollup/plugin-node-resolve': ^13.3.0
-  '@rollup/plugin-typescript': ^11.0.0
   '@semantic-release/changelog': 6.0.1
   '@semantic-release/commit-analyzer': 9.0.2
   '@semantic-release/git': 10.0.1
@@ -20,7 +19,6 @@ specifiers:
   '@types/babel__core': ^7.20.0
   '@types/lodash': 4.14.182
   '@types/node': ^18.15.11
-  husky: ^8.0.0
   lint-staged: ^12.4.2
   prettier: ^2.6.2
   rimraf: ^3.0.2
@@ -39,7 +37,6 @@ devDependencies:
   '@rollup/plugin-commonjs': 22.0.0_rollup@2.74.1
   '@rollup/plugin-json': 4.1.0_rollup@2.74.1
   '@rollup/plugin-node-resolve': 13.3.0_rollup@2.74.1
-  '@rollup/plugin-typescript': 11.0.0_elfbdiwtul5hlctgk5gdo32nu4
   '@semantic-release/changelog': 6.0.1_semantic-release@19.0.3
   '@semantic-release/commit-analyzer': 9.0.2_semantic-release@19.0.3
   '@semantic-release/git': 10.0.1_semantic-release@19.0.3
@@ -49,7 +46,6 @@ devDependencies:
   '@types/babel__core': 7.20.0
   '@types/lodash': 4.14.182
   '@types/node': 18.15.11
-  husky: 8.0.1
   lint-staged: 12.4.2
   prettier: 2.6.2
   rimraf: 3.0.2
@@ -1668,25 +1664,6 @@ packages:
       rollup: 2.74.1
     dev: true
 
-  /@rollup/plugin-typescript/11.0.0_elfbdiwtul5hlctgk5gdo32nu4:
-    resolution: {integrity: sha512-goPyCWBiimk1iJgSTgsehFD5OOFHiAknrRJjqFCudcW8JtWiBlK284Xnn4flqMqg6YAjVG/EE+3aVzrL5qNSzQ==}
-    engines: {node: '>=14.0.0'}
-    peerDependencies:
-      rollup: ^2.14.0||^3.0.0
-      tslib: '*'
-      typescript: '>=3.7.0'
-    peerDependenciesMeta:
-      rollup:
-        optional: true
-      tslib:
-        optional: true
-    dependencies:
-      '@rollup/pluginutils': 5.0.2_rollup@2.74.1
-      resolve: 1.22.1
-      rollup: 2.74.1
-      typescript: 5.0.3
-    dev: true
-
   /@rollup/pluginutils/3.1.0_rollup@2.74.1:
     resolution: {integrity: sha512-GksZ6pr6TpIjHm8h9lSQ8pi8BE9VeubNT0OMJ3B5uZJ8pz73NPiqOtCog/x2/QzM1ENChPKxMDhiQuRHsqc+lg==}
     engines: {node: '>= 8.0.0'}
@@ -1695,21 +1672,6 @@ packages:
     dependencies:
       '@types/estree': 0.0.39
       estree-walker: 1.0.1
-      picomatch: 2.3.1
-      rollup: 2.74.1
-    dev: true
-
-  /@rollup/pluginutils/5.0.2_rollup@2.74.1:
-    resolution: {integrity: sha512-pTd9rIsP92h+B6wWwFbW8RkZv4hiR/xKsqre4SIuAOaOEQRxi0lqLke9k2/7WegC85GgUs9pjmOjCUi3In4vwA==}
-    engines: {node: '>=14.0.0'}
-    peerDependencies:
-      rollup: ^1.20.0||^2.0.0||^3.0.0
-    peerDependenciesMeta:
-      rollup:
-        optional: true
-    dependencies:
-      '@types/estree': 1.0.0
-      estree-walker: 2.0.2
       picomatch: 2.3.1
       rollup: 2.74.1
     dev: true
@@ -1900,10 +1862,6 @@ packages:
 
   /@types/estree/0.0.51:
     resolution: {integrity: sha512-CuPgU6f3eT/XgKKPqKd/gLZV1Xmvf1a2R5POBOGQa6uv82xpls89HU5zKeVoyR8XzHd1RGNOlQlvUe3CFkjWNQ==}
-    dev: true
-
-  /@types/estree/1.0.0:
-    resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
     dev: true
 
   /@types/lodash/4.14.182:
@@ -2898,12 +2856,6 @@ packages:
   /human-signals/2.1.0:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
     engines: {node: '>=10.17.0'}
-    dev: true
-
-  /husky/8.0.1:
-    resolution: {integrity: sha512-xs7/chUH/CKdOCs7Zy0Aev9e/dKOMZf3K1Az1nar3tzlv0jfqnYtu235bstsWTmXOR0EfINrPa97yy4Lz6RiKw==}
-    engines: {node: '>=14'}
-    hasBin: true
     dev: true
 
   /ignore/5.2.0:
