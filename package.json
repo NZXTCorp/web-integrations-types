@@ -1,0 +1,61 @@
+{
+  "name": "@nzxt/web-integrations-types",
+  "version": "0.1.0",
+  "author": "NZXT",
+  "license": "MIT",
+  "description": "web integrations monitoring type definitions",
+  "keywords": [
+    "nzxt",
+    "cam",
+    "kraken",
+    "web-integrations",
+    "types",
+    "typescript"
+  ],
+  "homepage": "https://github.com/nzxtcorp/web-integrations-lib#readme",
+  "bugs": {
+    "url": "https://github.com/nzxtcorp/web-integrations-lib/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nzxtcorp/web-integrations-lib.git"
+  },
+  "files": [
+    "v1"
+  ],
+  "scripts": {
+    "check": "tsc"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{json,md,yml}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "17.5.1",
+    "@commitlint/config-conventional": "17.4.4",
+    "@semantic-release/changelog": "6.0.3",
+    "@semantic-release/commit-analyzer": "9.0.2",
+    "@semantic-release/github": "8.0.7",
+    "@semantic-release/npm": "10.0.2",
+    "@semantic-release/release-notes-generator": "10.0.3",
+    "lint-staged": "13.2.0",
+    "prettier": "2.8.7",
+    "semantic-release": "21.0.1",
+    "typescript": "5.0.3"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "publishConfig": {
+    "tag": "latest",
+    "access": "restricted"
+  }
+}
