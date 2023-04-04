@@ -27,7 +27,6 @@ export interface Pc {
 }
 
 export interface Cpu {
-  id: number
   manufacturer: string
   name: string
   codeName: string
@@ -60,7 +59,6 @@ export interface CpuThread {
 }
 
 export interface Gpu {
-  id: string
   name: string
   tdpInWatts: NumberOrNull
   temperatureInCelsius: NumberOrNull
@@ -82,22 +80,6 @@ export interface Gpu {
   maxCoreVoltageInMillivolts: NumberOrNull
 }
 
-export interface PowerLimitWatts {
-  value: number
-  kind: typeof POWER_LIMIT_TYPE_WATTS
-}
-
-export interface PowerLimitPercentage {
-  value: number
-  kind: typeof POWER_LIMIT_TYPE_PERCENTAGE
-}
-
-export type PowerLimit = PowerLimitWatts | PowerLimitPercentage
-
-export const POWER_LIMIT_TYPE_PERCENTAGE = 'percentage'
-
-export const POWER_LIMIT_TYPE_WATTS = 'watts'
-
 export interface Ram {
   size: NumberOrNull
   used: NumberOrNull
@@ -110,10 +92,6 @@ export interface RamModule {
   size: NumberOrNull
   stockFrequency: NumberOrNull
   frequency: NumberOrNull
-  casLatency: NumberOrNull
-  rasToCASDelay: NumberOrNull
-  rasPrecharge: NumberOrNull
-  tRAS: NumberOrNull
 }
 
 declare global {
