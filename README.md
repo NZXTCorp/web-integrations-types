@@ -1,4 +1,8 @@
-# Web Integrations Monitoring
+## Web Integrations Monitoring Types
+
+NZXT CAM is a hardware monitoring software that provides users with information on the performance of various hardware components in their PC, including CPUs, GPUs, and RAM.
+
+In Web Integration Mode on Kraken devices, CAM provides monitoring data to the web application through the browser every second. This data can be used to create custom visualizations with monitoring information on Kraken devices.
 
 ## Description
 
@@ -10,9 +14,11 @@ Typed monitoring data for NZXT Web Integrations
 $ npm install @nzxt/web-integrations@latest
 ```
 
-## Window
+## Examples
 
 ```ts
+import { PC } from '@nzxt/web-integrations/v1'
+
 if (typeof window !== 'undefined') {
   window.nzxt = {
       v1: {
@@ -24,8 +30,6 @@ if (typeof window !== 'undefined') {
 }
 ```
 
-## Library
-
 ```ts
 import { onMonitoringDataUpdate } from '@nzxt/web-integrations/v1'
 
@@ -35,8 +39,6 @@ const end = onMonitoringDataUpdate((pc) => {
 
 end()
 ```
-
-## React
 
 ```ts
 // useMonitoringData.ts
@@ -58,5 +60,5 @@ export const useMonitoringData = () => {
 
 // app.tsx
 import { useMonitoringData } from './useMonitoringData'
-const monitoringData = useMonitoringData()
+const { cpus, gpus, ram } = useMonitoringData()
 ```
