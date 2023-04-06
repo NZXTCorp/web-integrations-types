@@ -18,24 +18,23 @@ jobs:
       - uses: pnpm/action-setup@v2
         name: Install pnpm
         with:
-          version: 7
+          version: 8
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
-          cache: 'pnpm'
+          node-version: 18
+          cache: "pnpm"
 
       - name: Install dependencies
         run: pnpm install
 
-      - run: pnpm build
+      - name: Sanity check
+        run: pnpm check
 
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          cp package.json dist
-          cd dist
           npx semantic-release

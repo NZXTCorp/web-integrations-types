@@ -1,13 +1,15 @@
 {
-  "name": "@nzxt/web-integrations",
-  "version": "1.0.0",
+  "name": "@nzxt/web-integrations-types",
+  "version": "0.1.0",
   "author": "NZXT",
   "license": "MIT",
-  "description": "web integrations monitoring type definitions and utilities",
+  "description": "web integrations monitoring type definitions",
   "keywords": [
     "nzxt",
+    "cam",
+    "kraken",
     "web-integrations",
-    "library",
+    "types",
     "typescript"
   ],
   "homepage": "https://github.com/nzxtcorp/web-integrations-lib#readme",
@@ -18,20 +20,11 @@
     "type": "git",
     "url": "git+https://github.com/nzxtcorp/web-integrations-lib.git"
   },
-  "exports": {
-    "./v1": {
-      "import": "./v1/index.es.js",
-      "require": "./v1/index.js",
-      "types": "./v1/index.d.ts"
-    }
-  },
   "files": [
-    "v1/**/*"
+    "v1"
   ],
   "scripts": {
-    "build": "rimraf dist && npm run build:types && npm run build:js",
-    "build:js": "rollup --config packages/v1/rollup.config.js",
-    "build:types": "tsc --emitDeclarationOnly --project packages/v1/tsconfig.json"
+    "check": "tsc --no-emit"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -43,33 +36,17 @@
       "git add"
     ]
   },
-  "dependencies": {},
-  "peerDependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.18.2",
-    "@babel/preset-env": "^7.18.2",
-    "@babel/preset-typescript": "^7.17.12",
-    "@commitlint/cli": "17.0.3",
-    "@commitlint/config-conventional": "17.0.3",
-    "@rollup/plugin-babel": "5.3.1",
-    "@rollup/plugin-commonjs": "^22.0.0",
-    "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^13.3.0",
-    "@semantic-release/changelog": "6.0.1",
+    "@commitlint/cli": "17.5.1",
+    "@commitlint/config-conventional": "17.4.4",
+    "@semantic-release/changelog": "6.0.3",
     "@semantic-release/commit-analyzer": "9.0.2",
-    "@semantic-release/git": "10.0.1",
-    "@semantic-release/github": "8.0.4",
-    "@semantic-release/npm": "9.0.1",
+    "@semantic-release/github": "8.0.7",
+    "@semantic-release/npm": "10.0.2",
     "@semantic-release/release-notes-generator": "10.0.3",
-    "@types/babel__core": "^7.20.0",
-    "@types/lodash": "4.14.182",
-    "@types/node": "^18.15.11",
-    "lint-staged": "^12.4.2",
-    "prettier": "^2.6.2",
-    "rimraf": "^3.0.2",
-    "rollup": "^2.74.1",
-    "rollup-plugin-terser": "^7.0.2",
-    "semantic-release": "19.0.3",
+    "lint-staged": "13.2.0",
+    "prettier": "2.8.7",
+    "semantic-release": "21.0.1",
     "typescript": "5.0.3"
   },
   "release": {

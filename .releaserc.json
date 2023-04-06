@@ -4,14 +4,7 @@
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
     ["@semantic-release/changelog", { "changelogFile": "CHANGELOG.md" }],
-    ["@semantic-release/npm", { "pkgRoot": "./dist/**/*" }],
-    [
-      "@semantic-release/git",
-      {
-        "assets": ["package.json", "CHANGELOG.md", "dist/**/*"],
-        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
-      }
-    ],
+    ["@semantic-release/npm", { "pkgRoot": "." }],
     "@semantic-release/github"
   ]
 }
