@@ -25,6 +25,7 @@ export interface MonitoringData {
   cpus: Cpu[];
   gpus: Gpu[];
   ram: Ram;
+  kraken: Kraken;
 }
 
 export interface Cpu {
@@ -92,4 +93,8 @@ export interface RamModule {
 
   frequency: Megahertz;
   stockFrequency: Megahertz;
+}
+
+export interface Kraken {
+  liquidTemperature: Celsius;
 }
