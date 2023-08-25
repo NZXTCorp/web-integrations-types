@@ -55,6 +55,8 @@ export interface Cpu {
 
   /** Thermal Design Power */
   tdp: Watts;
+
+  power: Watts;
 }
 
 export interface Gpu {
@@ -75,6 +77,8 @@ export interface Gpu {
   fanSpeed: Rpm;
   minFanSpeed: Rpm;
   maxFanSpeed: Rpm;
+
+  power: Watts;
 }
 
 export interface Ram {
