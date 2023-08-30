@@ -1,12 +1,12 @@
-type NumberOrNull = number | null;
-
-type Celsius = number | null;
-type Megahertz = number | null;
+export type NumberOrNull = number | null;
+export type Shape = "circle" | "square";
+export type Celsius = number | null;
+export type Megahertz = number | null;
 /* Revolutions per minute */
-type Rpm = number | null;
-type Watts = number | null;
+export type Rpm = number | null;
+export type Watts = number | null;
 /* 1024 * 1024 bytes */
-type Mebibytes = number | null;
+export type Mebibytes = number | null;
 
 declare global {
   interface Window {
@@ -16,6 +16,12 @@ declare global {
          * If set, NZXT CAM will call this function once a second with updated monitoring data.
          */
         onMonitoringDataUpdate?: (data: MonitoringData) => void;
+        /** Display Dimensions */
+        width: number;
+        height: number;
+        /** Shape of the display */
+        shape: Shape;
+        targetFps: number;
       };
     };
   }
