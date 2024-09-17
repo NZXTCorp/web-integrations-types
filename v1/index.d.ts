@@ -1,12 +1,12 @@
-export type NumberOrNull = number | null;
+export type NumberOrUndefined = number | undefined;
 export type Shape = "circle" | "square";
-export type Celsius = number | null;
-export type Megahertz = number | null;
+export type Celsius = NumberOrUndefined;
+export type Megahertz = NumberOrUndefined;
 /* Revolutions per minute */
-export type Rpm = number | null;
-export type Watts = number | null;
+export type Rpm = NumberOrUndefined;
+export type Watts = NumberOrUndefined;
 /* 1024 * 1024 bytes */
-export type Mebibytes = number | null;
+export type Mebibytes = NumberOrUndefined;
 
 declare global {
   interface Window {
@@ -41,10 +41,10 @@ export interface Cpu {
   socket: string;
 
   /** Processor load (0..1) */
-  load: NumberOrNull;
+  load: NumberOrUndefined;
 
-  numCores: NumberOrNull;
-  numThreads: NumberOrNull;
+  numCores: NumberOrUndefined;
+  numThreads: NumberOrUndefined;
 
   temperature: Celsius;
   minTemperature: Celsius;
@@ -69,7 +69,7 @@ export interface Gpu {
   name: string;
 
   /** GPU load (0..1) */
-  load: NumberOrNull;
+  load: NumberOrUndefined;
 
   temperature: Celsius;
   minTemperature: Celsius;
